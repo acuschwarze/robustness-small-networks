@@ -131,7 +131,8 @@ for REMOVAL_STRATEGY in ['attack', 'random']:
 
     # Format subplot 1
     axes[0].set(xlabel="fraction " + r'$f$', ylabel='rel. LCC size')
-    axes[0].set_ylim(-0.1, 1.05)
+    axes[0].set_xlim(-0.02, 1.03)
+    axes[0].set_ylim(-0.02, 1.12)
     axes[0].legend(loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=4)
 
     # ============================================================================
@@ -201,14 +202,17 @@ for REMOVAL_STRATEGY in ['attack', 'random']:
 
     # Format subplot 2
     axes[1].set_yticklabels([])
-    axes[1].set_ylim(-0.1, 1.05)
+    axes[1].set_xlim(-0.02, 1.03)
+    axes[1].set_ylim(-0.02, 1.12)
     axes[1].set(xlabel=r'fraction $f$')
     axes[1].legend()
 
     # Add subplot labels
-    axes[0].text(0.07, 0.1, '(a)', transform=axes[0].transAxes, 
+    axes[0].text(0.99,0.97, #0.07, 0.1, 
+                 '(a)', transform=axes[0].transAxes, 
                 fontsize=10, fontweight='normal', va='top', ha='right')
-    axes[1].text(0.07, 0.1, '(b)', transform=axes[1].transAxes, 
+    axes[1].text(0.99,0.97, #0.07, 0.1, 
+                 '(b)', transform=axes[1].transAxes, 
                 fontsize=10, fontweight='normal', va='top', ha='right')
 
     # Adjust layout

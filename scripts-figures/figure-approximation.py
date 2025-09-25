@@ -305,7 +305,7 @@ for ri in range(2):
 
         ax.text(0.9,0.85, "(" + 'bcdefg'[data_index] + ")",  ha='center', va='center', transform=ax.transAxes)
         if data_index==3:
-            plt.legend(labelspacing = 0.05, borderpad=0.3)
+            plt.legend(loc=2, labelspacing = 0.05, borderpad=0.3)
 
 #plt.show()
 plt.savefig(os.path.join(REPO_ROOT, 'figures', 'fig_approximation.pdf'))
