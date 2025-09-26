@@ -36,14 +36,14 @@ NETWORK_THRESHOLD: float = 0.2
 NETWORK_SIZES: List[int] = [10, 15, 25, 50]
 EDGE_PROBABILITIES: List[float] = [1 / (NETWORK_THRESHOLD * (n - 1)) for n in NETWORK_SIZES]
 NUM_SIMULATION_TRIALS: int = 100
-USE_TARGETED_REMOVAL: bool = True  # True for attack, False for random
-REMOVAL_STRATEGY: str = "attack" if USE_TARGETED_REMOVAL else 'random'
 
 # Visualization settings
 PLOT_COLORS: List[str] = ['red', 'blue', 'orange', 'green', 'purple', 'cyan', 'magenta']
 PLOT_MARKERS: List[str] = ['o', 'x', 'v', 's', '+', 'd', '1']
 
-for REMOVAL_STRATEGY in ['attack', 'random']:
+for USE_TARGETED_REMOVAL in [False, True]:
+
+    REMOVAL_STRATEGY = 'attack' if USE_TARGETED_REMOVAL else 'random'
 
     # Create figure with two subplots
     fig, axes = plt.subplots(1, 2, figsize=[10, 3.5])
