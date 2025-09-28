@@ -267,7 +267,7 @@ class mse_data_bucket:
                     point_idx = np.where(self.voronoi.point_region == region_index)[0][0]
                     ax.plot([self.voronoi.points[point_idx, 0]], 
                             [self.voronoi.points[point_idx, 1]], 
-                            color="grey", marker=".", markersize=5)
+                            color="0.8", marker=".", markersize=5)
 
         # Print area statistics for analysis
         region_areas_array = np.array(region_areas)
