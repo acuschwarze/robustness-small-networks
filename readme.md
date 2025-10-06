@@ -61,23 +61,24 @@ The repository includes pre-computed data in several folders:
 
 ### Complete Repository Structure Explained
 
-```
+
 ├─ LICENSE
 ├─ cache-combinatorics
-│  ├─ Pvalues.p
+│  *cache of connectivity values for recursive calculations*
+|  ├─ Pvalues.p
 │  │  *cache of probability values for recursive calculations*
 │  ├─ exact_degree_distributions_n[4...8]_p0.20.txt
 │  │  *degree distributions for graphs for varying sizes*
 │  ├─ exact_degree_distributions_n8_p[0.50/0.80/0.90].txt
 │  │  *degree distributions for graphs of varying edge probabilities*
-│  └─ fvalues.p
-│     *cache of connectivity values for recursive calculations*
+│  └─ fvalues.p   
 ├─ cache-figures
+│  *data caches for generating heatmap plots and Voronoi plots*
 │  ├─ heatmap_data.pkl
 │  ├─ real_network_mses_random.csv
 │  └─ real_network_mses_targeted.csv
-│     *data caches for generating heatmap plots and Voronoi plots*
 ├─ cpp
+│  *c++ scripts for fast calculations*
 │  ├─ .rendered.recursion.cpp
 │  ├─ exact-distributions_v3.cpp
 │  ├─ exact-distributions_v3.exe
@@ -86,18 +87,21 @@ The repository includes pre-computed data in several folders:
 │  ├─ p-recursion-multi.cpp
 │  ├─ p-recursion.cpp
 │  └─ p-recursion.exe
-│     *c++ scripts for fast calculations*
 ├─ data-real
+│  *cached results from node-removal simulations on real networks*
 │  └─ fulldata-[network-name].txt
-│     *cached results from node-removal simulations on real networks*
 ├─ data-synthetic
+|  *data collection on the size of the largest connected component S*
+|  *as a function of the fraction f of removed nodes for G(N,p)*
+|  *networks for a grid of values of N and p*
 │  ├─ infRelSCurve_attack[False/True]_n[1...100].npy
-│  │  *200 data files containing S(f) data for G(N,p) networks for a grid of values of N and p obtained via recursive calculations*
+│  │  *200 data files with S(f) data from recursive calculations*
 │  ├─ relSCurve_attack[False/True]_n[1...100].npy
-│  │  *200 data files containing S(f) data for G(N,p) networks for a grid of values of N and p obtained via results from percolation theory*
+│  │  *200 data files with S(f) data from percolation theory*
 │  └─ simRelSCurve_attack[False/True]_n[1...100].npy
-│     *200 data files containing S(f) data for G(N,p) networks for a grid of values of N and p obtained via simulation*
+│     *200 data files with S(f) data from simulations*
 ├─ figures
+|  *Figures created by the figure script*
 │  ├─ fig_approximation.pdf
 │  ├─ fig_heatmaps.pdf
 │  ├─ fig_intro.pdf
@@ -105,8 +109,8 @@ The repository includes pre-computed data in several folders:
 │  ├─ fig_lcc_over_f_large-random.pdf
 │  ├─ fig_lcc_over_f_small.pdf
 │  └─ fig_voronoi.pdf
-│     *Figures created by the figure script*
 ├─ libs
+|  *Folder with function libraries*
 │  ├─ finiteTheory.py
 │  │  *Library of functions for recursive calculations*
 │  ├─ infiniteTheory.py
@@ -120,6 +124,7 @@ The repository includes pre-computed data in several folders:
 │  └─ visualizations.py
 │     *Library of plotting functions used in exploratory analysis*
 ├─ scripts-calculations
+|  *Folder with scripts for data generation and analysis*
 │  ├─ calculate_fp_dictionaries.py
 │  │  *Script to create cached values for recursive calculations*
 │  ├─ heatmap_aggregator.py
@@ -133,11 +138,12 @@ The repository includes pre-computed data in several folders:
 │  └─ wrapper.ps1
 │     *Wrapper script for parallelizing heatmap data generation on Windows*
 └─ scripts-figures
+   *Folder with scripts for generating figures*
    ├─ figure-*.py
    │  *Script to recreate a figure from the paper*
    └─ run-all.py
       *Script to recreate all figures from the paper*
-```
+
 
 ## External Data
 
