@@ -61,7 +61,7 @@ The repository includes pre-computed data in several folders:
 
 ### Complete Repository Structure Explained
 
-```
+```python
 ├─ LICENSE  
 ├─ cache-combinatorics  
 │  # cache of connectivity values for recursive calculations
